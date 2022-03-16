@@ -12,22 +12,23 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "MobileSDK",
-            targets: ["MobileSDKFramework","MobileSDK"]),
+            targets: ["MobileSDKFramework","WebRTCFramework"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-       // .package(url: "https://github.com/barisgorgun/kandy-ios-webrtc.git", .branch("SPMDemo")),
-        .package(name: "WebRTC", url: "https://github.com/barisgorgun/kandy-ios-webrtc.git", branch: "SPMDemo")
+       // .package(name: "WebRTC", url: "https://github.com/barisgorgun/kandy-ios-webrtc.git", branch: "SPMDemo")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
+       /* .target(
             name: "MobileSDK",
             dependencies: ["WebRTC"],
-            path: "Sources"),
+            path: "Sources"),*/
         .binaryTarget(name: "MobileSDKFramework",
                       path: "MobileSDK.xcframework"),
+        .binaryTarget(name: "WebRTCFramework",
+                      path: "WebRTC.xcframework"),
     ]
 )
