@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "MobileSDK",
-            targets: ["MobileSDKFramework","WebRTCFramework"]),
+            targets: ["MobileSDKFramework"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -28,7 +28,5 @@ let package = Package(
             path: "Sources"),*/
         .binaryTarget(name: "MobileSDKFramework",
                       path: "MobileSDK.xcframework"),
-        .binaryTarget(name: "WebRTCFramework",
-                      path: "WebRTC.xcframework"),
     ]
 )
