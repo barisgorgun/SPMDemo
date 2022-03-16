@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "WebRTC",
+        "repositoryURL": "https://github.com/barisgorgun/SPMWebRTC.git",
+        "state": {
+          "branch": "master",
+          "revision": "562b94bf773f48af1cb2e84b23b984b90b4d5af1",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
