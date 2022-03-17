@@ -27,7 +27,6 @@ let package = Package(
             dependencies: [.product(name: "WebRTC", package: "SPMWebRTC")]),
         .target(
                     name: "WrapperLibrary",
-                   // dependencies: ["Clibndi"],
                     linkerSettings: [
                         .linkedFramework("AudioToolbox"),
                         .linkedFramework("VideoToolbox"),
@@ -36,10 +35,7 @@ let package = Package(
                         .linkedFramework("GLKit"),
                         .linkedFramework("PushKit"),
                         .linkedLibrary("c++"),
-                        .linkedLibrary("icucore"),
-                        .linkedLibrary("z"),
                     ]),
-                //.systemLibrary(name: "Clibndi"),
         .binaryTarget(name: "MobileSDKFramework",
                       path: "MobileSDK.xcframework"),
        
