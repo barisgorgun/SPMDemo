@@ -17,6 +17,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>WebRTC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>WrapperLibrary</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>
