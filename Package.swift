@@ -36,6 +36,7 @@ let package = Package(
                         .linkedFramework("PushKit"),
                         .linkedLibrary("c++"),
                         .linkedLibrary("z"),
+                        .linkedLibrary("icucore"),
                     ]),
         .binaryTarget(name: "MobileSDKFramework",
                       path: "MobileSDK.xcframework"),
