@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "MobileSDK",
-            targets: ["WebRTC","MobileSDKFramework","WrapperLibrary"]),
+            targets: ["WebRTC","MobileSDKFramework","iOSLibrary"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -26,7 +26,7 @@ let package = Package(
             name: "WebRTC",
             dependencies: [.product(name: "WebRTC", package: "SPMWebRTC")]),
         .target(
-                    name: "WrapperLibrary",
+                    name: "iOSLibrary",
                     linkerSettings: [
                         .linkedFramework("AudioToolbox"),
                         .linkedFramework("VideoToolbox"),
@@ -35,6 +35,7 @@ let package = Package(
                         .linkedFramework("GLKit"),
                         .linkedFramework("PushKit"),
                         .linkedLibrary("c++"),
+                        .linkedLibrary("z"),
                     ]),
         .binaryTarget(name: "MobileSDKFramework",
                       path: "MobileSDK.xcframework"),
