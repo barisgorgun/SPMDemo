@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "MobileSDK",
-            targets: ["WebRTC","MobileSDKFramework","iOSLibrary"]),
+            targets: ["MobileSDKFramework","iOSLibrary"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,9 +22,6 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "WebRTC",
-            dependencies: [.product(name: "WebRTC", package: "SPMWebRTC")]),
         .target(
                     name: "iOSLibrary",
                     cSettings: [.define("ENABLE_BITCODE", to: "NO")], linkerSettings: [
