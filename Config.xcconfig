@@ -7,4 +7,8 @@
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
-OTHER_LDFLAGS = $(inherited)  -ObjC
+
+ENABLE_BITCODE=NO,
+OTHER_LDFLAGS=$(inherited) -framework WebRTC -ObjC,
+CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES=YES,
+FRAMEWORK_SEARCH_PATHS = $(inherited)
