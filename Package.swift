@@ -27,7 +27,7 @@ let package = Package(
                    dependencies: [.product(name: "WebRTC", package: "SPMWebRTC")]),
         .target(
                     name: "iOSLibrary",
-                    cSettings: [.define("ENABLE_BITCODE", to: "NO")],
+                    cxxSettings: [.define("ENABLE_BITCODE", to: "NO")],
                     linkerSettings: [
                         .linkedFramework("AudioToolbox"),
                         .linkedFramework("VideoToolbox"),
