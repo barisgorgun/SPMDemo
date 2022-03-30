@@ -43,4 +43,5 @@ let package = Package(
                       path: "MobileSDK.xcframework"),
        
     ]
+    
 )
