@@ -27,7 +27,9 @@ let package = Package(
             dependencies: [.product(name: "WebRTC", package: "SPMWebRTC")]),
         .target(
                     name: "iOSLibrary",
-                     linkerSettings: [
+                    cSettings: [
+                        .define("OTHER_LDFLAGS", to: "-ObjC")
+                    ], linkerSettings: [
                         .linkedFramework("AudioToolbox"),
                         .linkedFramework("VideoToolbox"),
                         .linkedFramework("SystemConfiguration"),
