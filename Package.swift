@@ -29,7 +29,11 @@ let package = Package(
                     name: "iOSLibrary",
                     cSettings: [
                         .define("OTHER_LDFLAGS", to: "-ObjC")
-                    ], linkerSettings: [
+                    ],
+                    cxxSettings: [
+                        .define("ENABLE_BITCODE", to: "NO")
+                    ],
+                    linkerSettings: [
                         .linkedFramework("AudioToolbox"),
                         .linkedFramework("VideoToolbox"),
                         .linkedFramework("SystemConfiguration"),
