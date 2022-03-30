@@ -28,9 +28,7 @@ let package = Package(
         .target(
                     name: "iOSLibrary",
                     cSettings: [
-                        .define("OTHER_LDFLAGS", to: "-ObjC")
-                    ],
-                    cxxSettings: [
+                        .define("OTHER_LDFLAGS", to: "-ObjC"),
                         .define("ENABLE_BITCODE", to: "NO")
                     ],
                     linkerSettings: [
