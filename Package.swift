@@ -28,8 +28,8 @@ let package = Package(
         .target(
                     name: "iOSLibrary",
                     cSettings: [
-                        .define("OTHER_LDFLAGS", to: "-ObjC"),
-                        .define("ENABLE_BITCODE", to: "NO")
+                        .define("OTHER_LDFLAGS",to: "-ObjC", .when( configuration: .debug)),
+                        .define("ENABLE_BITCODE", to: "NO", .when( configuration: .release))
                     ],
                     linkerSettings: [
                         .linkedFramework("AudioToolbox"),
