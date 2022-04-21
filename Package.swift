@@ -11,13 +11,13 @@ let package = Package(
     products: [
         .library(
             name: "MobileSDK",
-            targets: ["WebRTC","Dependencies","MobileSDKFramework"]),
+            targets: ["WebRTCA","Dependencies","MobileSDK"]),
     ],
     dependencies: [
         .package(url: "https://github.com/barisgorgun/SPMWebRTC.git", branch: "packageFile"),
     ],
     targets: [
-        .target(name: "WebRTC",
+        .target(name: "WebRTCA",
                 dependencies: [.product(name: "WebRTC", package: "SPMWebRTC")]),
         
             .target(
@@ -39,7 +39,7 @@ let package = Package(
                 ]
             ),
         
-            .binaryTarget(name: "MobileSDKFramework",
+            .binaryTarget(name: "MobileSDK",
                           path: "MobileSDK.xcframework"),
         
     ]
