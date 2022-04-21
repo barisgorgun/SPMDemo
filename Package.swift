@@ -11,13 +11,13 @@ let package = Package(
     products: [
         .library(
             name: "MobileSDK",
-            targets: ["MobileSDK","Dependencies","MobileSDKFramework"]),
+            targets: ["WebRTC","Dependencies","MobileSDKFramework"]),
     ],
     dependencies: [
         .package(url: "https://github.com/barisgorgun/SPMWebRTC.git", branch: "packageFile"),
     ],
     targets: [
-        .target(name: "MobileSDK",
+        .target(name: "WebRTC",
                 dependencies: [.product(name: "WebRTC", package: "SPMWebRTC")]),
         
             .target(
