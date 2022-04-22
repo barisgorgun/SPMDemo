@@ -3,10 +3,10 @@
     "pins": [
       {
         "package": "WebRTC",
-        "repositoryURL": "https://github.com/barisgorgun/SPMWebRTC.git",
+        "repositoryURL": "https://github.com/Kandy-IO/kandy-ios-webrtc.git",
         "state": {
-          "branch": "packageFile",
-          "revision": "82cb19f58409f383bf45da4f75d5e5c26b013372",
+          "branch": "master",
+          "revision": "0a359e84d2481418389414cb8b3d031fcdbb598a",
           "version": null
         }
       }

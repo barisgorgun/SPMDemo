@@ -14,11 +14,11 @@ let package = Package(
             targets: ["WebRTCA","Dependencies","MobileSDK"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/barisgorgun/SPMWebRTC.git", branch: "packageFile"),
+        .package(url: "https://github.com/Kandy-IO/kandy-ios-webrtc.git", branch: "master"),
     ],
     targets: [
         .target(name: "WebRTCA",
-                dependencies: [.product(name: "WebRTC", package: "SPMWebRTC")]),
+                dependencies: [.product(name: "WebRTC", package: "kandy-ios-webrtc")]),
         
             .target(
                 name: "Dependencies",
